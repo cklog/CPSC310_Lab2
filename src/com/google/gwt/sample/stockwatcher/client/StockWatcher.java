@@ -41,7 +41,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
   private LoginInfo loginInfo = null;
   private VerticalPanel loginPanel = new VerticalPanel();
   private Label loginLabel = new Label(
-		  "Please sign in to your Google Account to access the StockWatcher application.");
+		  "Please sign in to your Google Account to access this AppEngine application.");
   private Anchor signInLink = new Anchor("Sign In");
   private Anchor signOutLink = new Anchor("Sign Out");
   private final StockServiceAsync stockService = GWT.create(StockService.class);
@@ -55,6 +55,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 	    loginService.login(GWT.getHostPageBaseURL(), new AsyncCallback<LoginInfo>() {
 	      public void onFailure(Throwable error) {
 	    	  handleError(error);
+	    	  System.out.print("probably didn't get here!");
 	    	  
 	      }
 
