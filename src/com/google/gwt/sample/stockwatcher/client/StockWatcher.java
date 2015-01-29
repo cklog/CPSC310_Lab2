@@ -55,7 +55,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 	    loginService.login(GWT.getHostPageBaseURL(), new AsyncCallback<LoginInfo>() {
 	      public void onFailure(Throwable error) {
 	    	  handleError(error);
-	    	  System.out.print("probably didn't get here!");
+	    	  System.out.print("probably didn't get here, but I wanted to!");
 	    	  
 	      }
 
@@ -170,7 +170,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 		    // Stock code must be between 1 and 10 chars that are numbers, letters, or dots.
 		    if (!symbol.matches("^[0-9a-zA-Z\\.]{1,10}$")) {
-		      Window.alert("'" + symbol + "' is not a valid symbol.");
+		      Window.alert("'" + symbol + "' is most certainly not a valid symbol.");
 		      newSymbolTextBox.selectAll();
 		      return;
 		    }
